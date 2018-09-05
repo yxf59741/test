@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			body{
+				background:#333;
+			}
+			.div1{
+				width:100px;
+				height:100px;
+				background:#0cc;
+				position: absolute;
+				top:100px;
+				left:50%;
+				border-radius: 50%;
+			}
+			.bar {
+			position: relative;
+			display: block;
+            top:20px;
+			width: 50px;
+			height: 5px;
+
+			margin: 10px auto;
+			background-color: #fff;
+
+			border-radius: 10px;
+
+			-webkit-transition: .3s;
+			transition: .3s;
+		}
+		
+		/*预备悬停特效*/
+		/*.div1:hover .bar:nth-child(1){
+			transform: translateY(2px) rotateZ(-5deg);
+		}
+		.div1:hover .bar:nth-child(3){
+			transform: translateY(-2px) rotateZ(5deg);
+		}*/
+		
+		/*直接转变特效*/
+		.div1:hover .bar:nth-child(1){
+			transform: translateY(15px) rotateZ(-45deg) scale(1.2,1.2);
+		}
+		.div1:hover .bar:nth-child(2){
+			opacity: 0;
+		}
+		.div1:hover .bar:nth-child(3){
+			transform: translateY(-15px) rotateZ(45deg) scale(1.2,1.2);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</body>
+</html>
